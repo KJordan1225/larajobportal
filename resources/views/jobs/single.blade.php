@@ -17,11 +17,29 @@
 </div>
 <!--/ bradcam_area  -->
 
+<div class="container">
 @if (\Session::has('save'))
     <div class="alert alert-success">
         <p>{!! \Session::get('save') !!}</p>
     </div>
 @endif
+</div>
+
+<div class="container">
+@if (\Session::has('apply'))
+    <div class="alert alert-danger">
+        <p>{!! \Session::get('apply') !!}</p>
+    </div>
+@endif
+</div>
+
+<div class="container">
+@if (\Session::has('applied'))
+    <div class="alert alert-success">
+        <p>{!! \Session::get('applied') !!}</p>
+    </div>
+@endif
+</div>
 
     <div class="job_details_area">
         <div class="container">
@@ -149,11 +167,25 @@
                                         <textarea name="#" id="" cols="30" rows="10" placeholder="Coverletter"></textarea>
                                     </div>
                                 </div> -->
-                                <div class="col-md-12">
-                                    <div class="submit_btn">
-                                        <button class="boxed-btn3 w-100" type="submit">Apply Now</button>
-                                    </div>
+                                <form action="{{ route('save.job') }}" method="POST">
+                            @csrf
+                                <input name="job_id" type="hidden" value="{{ $job->id }}">
+                                <input name="company" type="hidden" value="{{ $job->company }}">
+                                <input name="job_region" type="hidden" value="{{ $job->job_region }}">
+                                <input name="job_type" type="hidden" value="{{ $job->job_type }}">
+                                <input name="image" type="hidden" value="{{ $job->image }}">
+                                <input name="job_title" type="hidden" value="{{ $job->job_title }}">
+                        
+                            <div class="col-md-12">
+                                <div class="submit_btn">
+                                    @if($savedJob > 0)
+                                        <button class="boxed-btn3 w-100" style="background-color: red;" disabled>You applied throw this job</button>
+                                    @else
+                                        <button class="boxed-btn3 w-100" type="submit">Apply For Job</button>
+                                    @endif
                                 </div>
+                            </div>
+                        </form>
                             <!-- </div>
                         </form> -->
                     </div>
