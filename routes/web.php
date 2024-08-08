@@ -22,3 +22,7 @@ Route::post('/jobs/save', [App\Http\Controllers\Jobs\JobsController::class, 'sav
 Route::post('/jobs/apply', [App\Http\Controllers\Jobs\JobsController::class, 'applyJob'])->name('apply.job');
 
 
+//user profile
+Route::get('/user/profile', [App\Http\Controllers\Users\UsersController::class, 'profile'])->name('user.profile');
+
+

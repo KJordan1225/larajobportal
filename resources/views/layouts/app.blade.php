@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/slicknav.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style2.css') }}">
 
+    <link rel="stylesheet" href="{{ asset('assets/users_css/profile.css') }}">
+
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
@@ -83,6 +85,12 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item fs-4" href="#">
+                                       Profile
+                                    </a>
+                                    <a class="dropdown-item fs-4" href="#">
+                                       Applications
+                                    </a>
                                     <a class="dropdown-item fs-4" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
