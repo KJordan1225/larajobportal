@@ -1,0 +1,21 @@
+.job-listing ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.job-listing li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.image-column {
+    width: 100px;
+}
+.image-column img {
+    width: 100px;
+    height: 100px;
+}
+.text-column {
+    flex: 1;
+    padding-left: 10px;
+}
