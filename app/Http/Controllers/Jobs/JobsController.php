@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Job\Job;
 use App\Models\Job\JobSaved;
+use App\Models\Job\Application;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -50,7 +51,7 @@ class JobsController extends Controller
             return redirect('jobs/single/'.$request->job_id.'')->with('apply','Upload CV in profile page first');
         } else {
 			
-            $applyJob = JobSaved::create ([
+            $applyJob = Application::create ([
                 'cv' => Auth::user()->cv,
                 'job_id' => $request->job_id,
                 'user_id' => Auth::user()->id,
@@ -62,7 +63,7 @@ class JobsController extends Controller
             ]);
 
             if ($applyJob) {
-                return redirect('jobs/single/'.$request->job_id.'')->with('apply','Applied for job successfully');
+                return redirect('jobs/single/'.$request->job_id.'')->with('applied','Applied for job successfully');
             }
         }
     }

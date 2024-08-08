@@ -23,6 +23,7 @@ class User extends Authenticatable
         'cv',
         'bio',
         'job_title',
+        'job_id',
         'twitter',
         'facebook',
         'linkedin',

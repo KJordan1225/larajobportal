@@ -167,7 +167,7 @@
                                         <textarea name="#" id="" cols="30" rows="10" placeholder="Coverletter"></textarea>
                                     </div>
                                 </div> -->
-                                <form action="{{ route('save.job') }}" method="POST">
+                                <form action="{{ route('apply.job') }}" method="POST">
                             @csrf
                                 <input name="job_id" type="hidden" value="{{ $job->id }}">
                                 <input name="company" type="hidden" value="{{ $job->company }}">
