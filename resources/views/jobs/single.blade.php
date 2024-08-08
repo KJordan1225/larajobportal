@@ -179,7 +179,7 @@
                             <div class="col-md-12">
                                 <div class="submit_btn">
                                     @if($savedJob > 0)
-                                        <button class="boxed-btn3 w-100" style="background-color: red;" disabled>You applied throw this job</button>
+                                        <button class="boxed-btn3 w-100" style="background-color: red;" disabled>You applied to this job</button>
                                     @else
                                         <button class="boxed-btn3 w-100" type="submit">Apply For Job</button>
                                     @endif
