@@ -18,17 +18,43 @@
 .custom-button {
     display: block;
     margin: 20px auto;
-    background-color: #007bff;
+    background-color: green;
     color: white;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
+    width: 200px;
+    font-size: 18px;
+}
+
+.custom-profile-button {
+    display: block;
+    margin: 20px auto;
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 200px;
+    font-size: 18px;
 }
 
 a:hover {
     color: white;
     text-decoration: none;
     background-color: red;			
+}
+
+button:hover {
+    color: white;
+    text-decoration: none;
+    background-color: red;			
+}
+
+.profile-paragraph {
+    font-size: 18px;
+    color: #000000;
 }
     

@@ -14,7 +14,7 @@
 
         <!-- Row 2: Job Title -->
         <div class="mt-3">
-            <h5>{{ $profile->job_title }}</h5>
+            <span class="profile-paragraph">{{ $profile->job_title }}</span>
         </div>
 
         <!-- Row 3: Download CV Button -->
@@ -24,7 +24,12 @@
 
         <!-- Row 4: Bio -->
         <div class="mt-3">
-            <p>{{ $profile->bio }}</p>
+            <p class="profile-paragraph">{{ $profile->bio }}</p>
+        </div>
+
+        <!-- Row Update profile button -->
+        <div class="mt-3">
+            <a href="#" class="custom-profile-button">Update Profile Info</a>
         </div>
     </div>
 </div>
