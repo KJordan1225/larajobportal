@@ -23,6 +23,8 @@ Route::post('/jobs/apply', [App\Http\Controllers\Jobs\JobsController::class, 'ap
 
 
 //user profile
-Route::get('/user/profile', [App\Http\Controllers\Users\UsersController::class, 'profile'])->name('user.profile');
+Route::get('/users/profile', [App\Http\Controllers\Users\UsersController::class, 'profile'])->name('user.profile');
+Route::get('users/profile/edit', [App\Http\Controllers\Users\UsersController::class, 'edit_profile'])->name('user.display-update-profile');
+Route::put('/users/profile/update', [App\Http\Controllers\Users\UsersController::class, 'update_profile'])->name('user.profile-update');
 
 

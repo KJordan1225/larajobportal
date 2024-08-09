@@ -29,7 +29,7 @@
 
         <!-- Row Update profile button -->
         <div class="mt-3">
-            <a href="#" class="custom-profile-button">Update Profile Info</a>
+            <a href="{{ route('user.display-update-profile') }}" class="custom-profile-button">Update Profile Info</a>
         </div>
     </div>
 </div>
