@@ -85,7 +85,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item fs-4" href="#">
+                                    <a class="dropdown-item fs-4" href="{{ route('user.profile') }}">
                                        Profile
                                     </a>
                                     <a class="dropdown-item fs-4" href="#">
