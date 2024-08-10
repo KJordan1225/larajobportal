@@ -18,6 +18,8 @@ class Admin extends Model
         'name',
         'email',
         'password',
+		'created_at',
+		'update_at',
     ];
 	
 	public $timestamps = true;	
