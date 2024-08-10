@@ -91,6 +91,9 @@
                                     <a class="dropdown-item fs-4" href="#">
                                        Applications
                                     </a>
+                                    <a class="dropdown-item fs-4" href="#">
+                                       Saved Jobs
+                                    </a>
                                     <a class="dropdown-item fs-4" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

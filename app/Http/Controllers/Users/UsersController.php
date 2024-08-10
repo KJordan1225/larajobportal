@@ -34,10 +34,31 @@ class UsersController extends Controller
         $profile = User::findOrFail($profile_id);
 
         // Update the profile's information
-        $profile->name = $validatedData['name'];
-        $profile->job_title = $validatedData['job_title'];
-        $profile->cv = $validatedData['cv'];
-        $profile->bio = $validatedData['bio'];
+        if(empty($validatedData['name'])) {
+            $profile->name ='No name';
+        } else {
+            $profile->name = $validatedData['name'];   
+        }
+        
+        
+
+        if(empty($validatedData['job_title'])) {
+            $profile->job_totle ='No job title';
+        } else {
+            $profile->job_totle = $validatedData['job_totle'];
+        }
+
+        if(empty($validatedData['cv'])) {
+            $profile->cv ='No cv';
+        } else {
+            $profile->cv = $validatedData['cv'];
+        }
+
+        if(empty($validatedData['bio'])) {
+            $profile->bio ='No bio';
+        } else {
+            $profile->bio = $validatedData['bio'];
+        }
 
         // Save the changes to the database
         $profile->save();
